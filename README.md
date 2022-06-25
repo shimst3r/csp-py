@@ -1,6 +1,20 @@
-# py-csp
+# csp-py
 
 A Python implementation of [Communicating Sequential Processes (CSP)](https://en.wikipedia.org/wiki/Communicating_sequential_processes).
+
+## Installation
+
+You can install from source using Poetry or from PyPI:
+
+```shell
+# install from source
+git clone git@github.com:shimst3r/csp-py.git
+cd csp_py
+poetry install
+
+# install from PyPI
+pip install csp-py
+```
 
 ## Idea behind CSP
 
