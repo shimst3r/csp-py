@@ -35,3 +35,9 @@ for url in urls:
 for url, hash in monitor.collect():
     print(f"{url}: {hash}")
 ```
+
+## Roadmap
+
+- [ ] Add support for `multiprocessing.Process` and `asyncio`.
+- [ ] Add interoperability between `asyncio` coroutines, `multiprocessing.Process` and `threading.Thread`.
+- [ ] Add error handling and a cancellation feature to `Monitor`.
