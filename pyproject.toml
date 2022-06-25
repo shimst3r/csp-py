@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "py-csp"
+name = "csp-py"
 version = "0.1.0"
 description = ""
 authors = ["cilanthr0 <cilanthr0@protonmail.com>"]

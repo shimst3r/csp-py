@@ -1,5 +1,5 @@
 import pytest
-from py_csp import Monitor, __version__, functions
+from csp_py import Monitor, __version__, functions
 
 
 @pytest.fixture
