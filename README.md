@@ -30,7 +30,7 @@ To put it simply, CSP is a style of concurrency that prefers communication over 
 
 ## Example
 
-This is how you can use `py-csp` (imports ommitted for readability):
+This is how you can use `csp-py` (imports ommitted for readability):
 
 ```python
 fns = [functions.get_url, functions.hash]
