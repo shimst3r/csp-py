@@ -31,6 +31,31 @@ def test_monitor_from_functions():
     assert len(monitor.channels) == len(fns) + 1
 
 
+def test_monitor_from_graph_simple():
+    graph = {
+        functions.identity: [
+            {str.upper: [functions.replace]},
+            {str.lower: [functions.replace]},
+        ]
+    }
+
+    # TODO: The graph should look like this
+    #                 input
+    #                   |
+    #                   v
+    #               identity
+    #              /        \
+    #             v         v
+    #         str.upper    str.lower
+    #             |         |
+    #             v         v
+    #         replace      replace
+    #             |         |
+    #             v         v
+    #          output      output
+    assert False
+
+
 def test_basic_monitor(raw_strings):
     expected_strings = ("HOLLE", "WERLD", "URO", "YEA", "EKUY?")
 

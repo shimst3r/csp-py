@@ -9,6 +9,8 @@ from typing import Any, Callable
 Channel = Queue[Any]
 # Function is a callable that takes two Channels and returns any value.
 Function = Callable[[Any], Any]
+# Graph is a directed graph (digraph) of functions.
+Graph = dict[Function, list["Graph"] | list[Function]]
 
 
 class Runner:
@@ -82,6 +84,14 @@ class Monitor:
         for function in functions:
             monitor.register_function(function)
         return monitor
+
+    @classmethod
+    def from_graph(cls, graph: Graph, num_procs: int) -> "Monitor":
+        """
+        from_graph creates a new Monitor instance from a list of functions with
+        multiple output channels (a directed graph, or digraph).
+        """
+        ...
 
     def collect(self):
         """collect collects the result from the last output channel."""

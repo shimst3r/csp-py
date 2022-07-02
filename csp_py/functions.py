@@ -6,6 +6,11 @@ from typing import Tuple
 from urllib.error import HTTPError
 
 
+def identity(s: str) -> str:
+    """identity returns the input as output"""
+    return s
+
+
 def replace(s: str) -> str:
     """replace replaces uppercase vowels with other uppercase vowels."""
     return s.translate(str.maketrans("AEIOU", "UOIEA"))
